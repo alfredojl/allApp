@@ -35,7 +35,8 @@
 </template>
 <script>
 import axios from "axios";
-import Swal from 'sweetalert2'
+import Swal from 'sweetalert2';
+import config from '../config/config';
 export default {
   data() {
     return {
@@ -69,7 +70,7 @@ export default {
         this.formData.append("record3", this.files[2], this.files[2].name);
         this.formData.append("curp", this.curp_register);
         let res = await axios.post(
-          "https://localhost:3000/voicePrint/save",
+          `${config.api}/voicePrint/save`,
           this.formData,
           {},
           {

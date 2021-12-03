@@ -39,7 +39,7 @@
 <script>
 import axios from "axios";
 import Swal from "sweetalert2";
-// import Swal from "sweetalert2";
+import config from '../config/config';
 export default {
   data() {
     return {
@@ -71,7 +71,7 @@ export default {
         this.formData.append("record", this.file, this.file.name);
         this.formData.append("curp", this.curp_recognition);
         let res = await axios.post(
-          "https://localhost:3000/voicePrint/validate",
+          `${config.api}/voicePrint/validate`,
           this.formData,
           {},
           {

@@ -8,9 +8,9 @@ Vue.use(Vuetify);
 export default new Vuetify({
   theme: {
     dark: true,
-      options: {
-        customProperties: true,
-      },
+    options: {
+      customProperties: true,
+    },
     themes: {
       light: {
         primary: '#007BFF',
@@ -23,8 +23,11 @@ export default new Vuetify({
       },
     },
   },
-    lang: {
-      locales: { es },
-      current: 'es',
-    },
+  icons: {
+    iconfont: 'mdi',
+  },
+  lang: {
+    locales: { es },
+    current: 'es',
+  },
 });

@@ -119,6 +119,7 @@
 <script>
 import axios from "axios";
 import Swal from "sweetalert2";
+import config from '../config/config';
 export default {
   data() {
     return {
@@ -151,7 +152,7 @@ export default {
         formData.append("INE", this.ine);
         formData.append("selfie", this.selfie);
         const resp = await axios.post(
-          "https://localhost:3000/faceRecognition",
+          `${config.api}/faceRecognition`,
           formData,
           {},
           {

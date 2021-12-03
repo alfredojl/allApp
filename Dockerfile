@@ -2,6 +2,6 @@ FROM node:16.13.0-alpine3.13
 
 WORKDIR /app
 COPY . .
-RUN npm i -g http-server && yarn install && yarn run build
+RUN npm i -g http-server && yarn install && yarn build
 
-CMD ["http-server", "-p", "80", "dist"]
+CMD ["http-server", "dist"]
